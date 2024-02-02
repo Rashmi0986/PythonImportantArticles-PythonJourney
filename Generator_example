@@ -1,0 +1,16 @@
+def my_gen(n):
+    for i in range(n):
+        yield i
+
+# Usage
+gen = my_gen(5)
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+
+will return 
+0
+1
+2
+3
