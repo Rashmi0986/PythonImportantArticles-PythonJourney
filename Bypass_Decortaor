@@ -1,6 +1,7 @@
 Bypassing Decorators 
 
 
+Flexible Decorator 
 
 https://pythonin1minute.com/how-to-test-decorators-in-python/
 
@@ -8,20 +9,27 @@ https://pythonin1minute.com/how-to-test-decorators-in-python/
 example :
 
 
+from functools import wraps
 def triple(func):
+    @wraps(func)
     def wrapper_func(*args, **kwargs):
         return func(*args, **kwargs) * 3 
     return wrapper_func
+    
 
 
 def example(x):
     return x
 
+#decorated call
 wrapped = triple(example)
+print(wrapped(3))
 
-example(1) # returns 1
-wrapped(1) # returns 3
+#Undecorated Call 
+print(example(45))
 
-tested and Tried with Online GDB 
+
+
+
 
 
