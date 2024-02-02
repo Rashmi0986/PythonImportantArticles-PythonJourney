@@ -1,0 +1,27 @@
+Bypassing Decorators 
+
+
+
+https://pythonin1minute.com/how-to-test-decorators-in-python/
+
+
+example :
+
+
+def triple(func):
+    def wrapper_func(*args, **kwargs):
+        return func(*args, **kwargs) * 3 
+    return wrapper_func
+
+
+def example(x):
+    return x
+
+wrapped = triple(example)
+
+example(1) # returns 1
+wrapped(1) # returns 3
+
+tested and Tried with Online GDB 
+
+
