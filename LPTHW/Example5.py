@@ -1,6 +1,6 @@
 my_name = "test_user"
 my_age = "25"
-my_height = "5.4"
+my_height = "74" #inches
 my_weight = "180"
 
 print(f"Let's Talk about {my_name}")
