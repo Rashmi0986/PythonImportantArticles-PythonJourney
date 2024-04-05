@@ -16,6 +16,7 @@ print(f"I said {y} ")
 hilarious = False
 joke_evaluation = "Isn't that joke too funny !!!"
 
+#String is encapsulated inside another string
 print(joke_evaluation.format(hilarious))
 
 w = "This is the left side of ..."
