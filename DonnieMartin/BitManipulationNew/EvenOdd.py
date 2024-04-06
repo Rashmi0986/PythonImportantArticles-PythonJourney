@@ -7,7 +7,7 @@ Constraints:
 3. Does number fit into memory ?
     Yes
 4. Return value ?
-    Just print even or odd
+    even or odd as string
 
 Testcases:
     0 -> number should't be negative or 0
