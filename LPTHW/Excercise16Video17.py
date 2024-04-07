@@ -1,28 +1,30 @@
-# reading files 
+# reading and writing files 
 from sys import argv 
+script , filename = argv
 
-# collect the variables provided in the command line 
-script , filename = argv 
+print(f"We are going to erase {filename}")
+print("if you dont want that hit ^C ")
+print("if you do want that hit return")
 
-# open the file name using open()
+input("?")
+print("opening the file ")
+
+target = open(filename, "w")
+
+print("Truncating the filename , Goodbye")
+target.truncate()
+
+print("Now am going to ask you for three lines")
+line1 = input("line1: ")
+line2 = input("line2: ")
+line3 = input("line3: ")
+
+print("am, going to write this to files ")
+target.write(f"{line1}\n{line2}\n{line3}")
+
+target.close()
+
+print("printing the written data ")
 txt = open(filename)
-
-# print the filename 
-print(f"here is your {filename}")
-
-# read file name here
 print(txt.read())
-#close the reader here 
 txt.close()
-# Try reading any other filename here
-print("type the filename again ")
-prompt = "> "
-file_again = input(prompt)
-txt_again = open(file_again)
-
-
-print(txt_again.read())
-
-#close the file here 
-txt_again.close()
-

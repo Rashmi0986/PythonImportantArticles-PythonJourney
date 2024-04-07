@@ -1,24 +1,28 @@
-from sys import argv
-script , username = argv
-prompt = '> '
+# reading files 
+from sys import argv 
 
-print(f"Hi {username}, I'm the {script}")
-print("I would like to ask you few questions")
+# collect the variables provided in the command line 
+script , filename = argv 
 
-print(f"Do you like me {username} ?")
-likes = input(prompt)
-print(f"where do you live {username}")
-location = input(prompt)
+# open the file name using open()
+txt = open(filename)
 
-print("What kind of computer you have ")
-computer= input(prompt)
+# print the filename 
+print(f"here is your {filename}")
 
-print(f"""
-Alright so you said {likes} likes about me,
-and you are located at {location},
-you have {computer}
-      """)
+# read file name here
+print(txt.read())
+#close the reader here 
+txt.close()
+# Try reading any other filename here
+print("type the filename again ")
+prompt = "> "
+file_again = input(prompt)
+txt_again = open(file_again)
 
 
+print(txt_again.read())
 
+#close the file here 
+txt_again.close()
 
