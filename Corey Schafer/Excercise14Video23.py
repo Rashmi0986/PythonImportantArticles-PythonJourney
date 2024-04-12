@@ -7,4 +7,6 @@ for dirpath , dirnames , filenames in os.walk(cwd):
     print(f'Current dirname: {dirnames}')
     print(f'Current filenames: {filenames}')
 
+#os.path.splitext('/tmp/test.txt')
+
     
