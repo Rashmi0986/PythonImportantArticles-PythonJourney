@@ -13,4 +13,12 @@ def indexofRowWithMaxSum(nums):
 print(indexofRowWithMaxSum([[1,2,3],[4,5,6]]))
 
 
+"""
+#Time complexity of the above solution is O(N2) - quadratic time complexity 
+need to reduce it to - Liner time - Think trhough the algorithm . 
+Ref for algo time complexity - https://stackoverflow.com/questions/4317414/polynomial-time-and-exponential-time
+"""
+
+
+
 
