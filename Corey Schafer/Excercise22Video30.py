@@ -111,7 +111,7 @@ matches = pattern.finditer(emails)
 for match in matches:
     print(match)
 
-"""
+
 pattern = re.compile(r"\d\d\d.\d\d\d.\d\d\d\d")
 matches = pattern.finditer(text_to_search)
 with open("Excercise22Video30.txt", 'r') as f:
@@ -119,3 +119,18 @@ with open("Excercise22Video30.txt", 'r') as f:
     matches = pattern.finditer(text_to_search)
     for match in matches:
         print(match)
+
+
+"""
+#import re
+#sentence = "Start a sentence and bring it to the end "
+sentence = '''
+cat 
+mat
+sat
+'''
+pattern = re.compile(r'[^b]at')
+
+matches = pattern.finditer(sentence)
+for match in matches:
+    print(match)
