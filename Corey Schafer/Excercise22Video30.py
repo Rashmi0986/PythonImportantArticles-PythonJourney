@@ -121,7 +121,7 @@ with open("Excercise22Video30.txt", 'r') as f:
         print(match)
 
 
-"""
+
 #import re
 #sentence = "Start a sentence and bring it to the end "
 sentence = '''
@@ -134,3 +134,19 @@ pattern = re.compile(r'[^b]at')
 matches = pattern.finditer(sentence)
 for match in matches:
     print(match)
+"""
+
+Url = """
+https://www.google.com
+https://www.yahoo.com
+https://www.coreyms.com
+"""
+
+pattern = re.compile(r'https?://(www\.)?(\w+)(\.\w+)')
+matches = pattern.finditer(Url)
+subbed_urls = pattern.sub(r'\2\3', Url)
+
+print(subbed_urls)
+for match in matches:
+    print(match)
+
